@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		/*div li:nth-child(2){color: red;}*/
+
+		li.red{color:red;} /*맨앞에 li이기때문에 id값이 똑같아도 li만 바뀜*/
+	</style>
+</head>
+<body>
+	<!-- div>h1>lorem5^h2>lorem2^ul>li*3>lorem2   '^'의 의미알기-->
+	<div>
+		<h1 class="red">Lorem ipsum dolor sit amet.</h1>
+		<h2>Lorem ipsum.</h2>
+		<ul>
+			<li>Lorem ipsum.</li>
+			<li class="red">Explicabo, accusantium.</li>
+			<li>Doloremque, in!</li>
+		</ul>
+	</div>
+</body>
+</html>
