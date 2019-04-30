@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>rainbow box</title>
+	<style>
+		*{margin:0;}
+		.wrap{
+			width:600px; 
+			height:120px;
+			background-color:gray;
+		}
+		.wrap div{
+			width:100px;
+			height:100px;
+			float:left;
+			border:10px solid black
+			/*box-sizing:border-box;*/
+		}
+		.wrap div:nth-child(1){
+			background-color:red;
+		}
+		.wrap div:nth-child(2){
+			background-color:orange;
+		}
+		.wrap div:nth-child(3){
+			background-color:yellow;
+		}
+		.wrap div:nth-child(4){
+			background-color:green;
+		}
+		.wrap div:nth-child(5){
+			background-color:blue;
+		}
+
+	</style>
+</head>
+<body>
+	<div class=wrap>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+	</div>
+</body>
+</html>

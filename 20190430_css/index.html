@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>box css</title>
+	<style>
+		*{margin:0;}
+		.div_wrap{
+			width:600px;
+			height:120px;
+			background-color:gray;
+		}
+		.div_wrap div{
+			width:100px;
+			height:100px;
+			float:left;
+			border:10px solid black;
+			/*padding:10px;*/
+			/*box-sizing:border-box;*/
+		}
+		.div_wrap div:nth-child(1){
+			background-color:red; 
+		}
+		.div_wrap div:nth-child(2){
+			background-color:orange;
+		}
+		.div_wrap div:nth-child(3){
+			background-color:yellow;
+		}
+		.div_wrap div:nth-child(4){
+			background-color:green;
+		}
+		.div_wrap div:nth-child(5){
+			background-color:blue;
+		}						
+	</style>
+</head>
+<body>
+	<div class="div_wrap">
+		<div>빨</div>
+		<div>주</div>
+		<div>노</div>
+		<div>초</div>
+		<div>파</div>
+	</div>
+</body>
+</html>
