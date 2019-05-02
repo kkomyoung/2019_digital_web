@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>position</title>
+	<style>
+		*{margin:0; box-sizing: border-box;}
+		body{background-image:url(../images/bg_grid.gif);}
+/*		.box{
+			width: 100px;height: 100px;
+			border:1px solid #000;
+			position:absolute;
+		}
+		.box:nth-child(1){background-color:red;}
+		.box:nth-child(2){background-color:green;left:50px;top:50px;}
+		.box:nth-child(3){background-color:blue;left:100px;top:100px;}*/
+/*		.box1,.box2{width: 100px; height: 100px;position:absolute;}
+		.box1{
+			background-color:red; left:100px; top: 100px;
+			z-index:2;
+		}
+		.box2{
+			background-color: #0f0;left: 50px;top: 50px;
+			z-index:1;
+		}*/
+/*		.box1{width: 100px;height: 100px;position: relative;
+			background-color:#f00;margin:0 auto;}
+		.box2{width: 100px;height: 100px;position: relative;
+			background-color:#0f0;z-index:1;}
+		.box3{width: 100px;height: 100px;position: absolute;
+			background-color: #00f;left:0;top: 50px;}*/
+/*		div#header{width:980px;height: 100px;margin: 0 auto;
+			background-color:skyblue;position:relative}
+			.util_menu,.gnb_menu{position:absolute;}*/
+			/*h1{text-align:center;}*/
+/*			h1{width:100px;margin:0 auto;text-align:center;}
+
+			.util_menu{width: 200px;background-color: #f00;top: 10px;right: 10px;}
+			.gnb_menu{width: 980px;background-color: #0f0;height: 40px;bottom: 10px;}*/
+		#header{
+			width: 980px;height: 100px;
+			margin: 0 auto;
+			background-color:skyblue; padding-top: 25px;
+			/*position: relative;*/
+		}
+		#header>h1{
+			width: 100px;margin: 0 auto;
+		}
+		#header>div.util_menu{
+			width: 200px;height: 40px;
+			position:absolute;
+			background-color:#f00;
+			right: 0;top: 0;
+		}
+		#header>div.gnb_menu{
+			width: 980px;height: 40px;
+			position: absolute;
+			background-color:#0f0;
+			bottom: 0;
+		}
+	</style>
+
+</head>
+<body>
+<!-- 	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div> -->
+<!-- 	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div> -->
+	<div id="header">
+		<h1>logo</h1>
+		<div class="util_menu">util menu</div>
+		<div class="gnb_menu">gnb_menu</div>
+	</div>
+</body>
+</html>
