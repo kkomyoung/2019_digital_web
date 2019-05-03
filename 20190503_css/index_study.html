@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>복습</title>
+	<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Gamja+Flower|Yeon+Sung" rel="stylesheet">
+	<style>
+		*{margin:0; padding:0;box-sizing: border-box;}
+		li{list-style:none;}
+
+		body{background-image:url(../images/bg_grid.gif);}
+		#header{
+			width: 980px;height: 100px;
+			background-color:pink;
+			margin:0 auto;
+			position: relative;
+		}
+		#header h1{
+			font-family: 'Gamja Flower', cursive;
+			text-align:center;
+			line-height:50px;
+		}
+		#header .util_menu{
+			width: 200px;height: 40px;
+			background-color: skyblue;
+			position:absolute;
+			top:0; right:0;
+		}
+		#header .gnb_menu{
+			width: 980px;height: 40px;
+			background-color:yellow;
+			position: absolute;
+			bottom: 0;
+		}
+		ul.menu{
+			width: 980px;height: 40px;
+			background-color: #fff;
+		}
+		ul.menu>li{
+			font-family: 'Yeon Sung', cursive;
+			width: 196px;height: 40px;
+			float:left;
+			border-right:1px solid black;
+			text-align:center;
+			line-height: 40px
+		}
+		ul.menu>li:nth-child(1){border-left:1px solid black;}
+		ul.menu>li:hover{background-color:black; color:yellow;cursor:pointer;}
+		#visual{
+			width: 980px; height: 400px;
+			margin:0 auto;
+      		background:#000 url(../images/aaa.jpg) no-repeat center;
+      		background-size:100%;
+      	}
+      	#visual h1{
+      		font-family: 'East Sea Dokdo', cursive;
+      		color:white;
+      		text-align:center;
+      		line-height: 380px;
+      		font-size:6em;
+      		font-weight: normal;
+      	}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>과일</h1>
+		<div class="util_menu">더보기</div>
+		<div class="gnb_menu">
+			<ul class="menu">
+				<li>
+					<a href="http://www.naver.com">사과</a>
+				</li>
+				<li>포도</li>
+				<li>바나나</li>
+				<li>오렌지</li>
+				<li>메론</li>
+			</ul>
+		</div>
+	</div>
+	<div id="visual">
+		<h1>아모르파티</h1>
+	</div>
+</body>
+</html>
