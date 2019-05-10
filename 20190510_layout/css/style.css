@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/*header*/
+header#header_wrap{width: 980px;height: 100px;margin:0 auto;background-color:gray;position:relative;}
+header#header_wrap>h1{width: 100px;margin:0 auto;background-color: pink;text-align:center;}
+
+header#header_wrap>div.util_menu{background-color:skyblue;position:absolute;right:0;top:10px;text-align:center;}
+/*header#header_wrap>div.util_menu>ul:after{content:"";clear:both;display:block;}*/
+header#header_wrap>div.util_menu>ul>li{float:left;border-right:1px solid black;padding:0 15px;}
+header#header_wrap>div.util_menu>ul>li:last-child{border:none;}
+/*li 밑에 a는 하나뿐이기 때문에 a에 nth-child 넣는것은 불가능*/
+header#header_wrap>div.util_menu>ul>li>a{display:block;color:gray;line-height:35px;}
+header#header_wrap>div.util_menu>ul>li:hover{background-color:blue;}
+header#header_wrap>div.util_menu>ul>li:hover > a{color:white;}
+
+header#header_wrap>nav.gnb_wrap{width: 980px;background-color: violet;position:absolute;bottom: 0;}
+/*header#header_wrap>nav.gnb_wrap>ul:after{content:"";clear:both;display:block;}*/
+header#header_wrap>nav.gnb_wrap>ul>li{float:left;width: 163.33px;}
+header#header_wrap>nav.gnb_wrap>ul>li>a{
+	display:block;
+	background-color: #1d5da4;
+	text-align:center;
+	line-height: 45px;
+	color:white;
+	border-right:2px solid #326eac;
+}
