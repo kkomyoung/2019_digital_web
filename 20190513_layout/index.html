@@ -3,24 +3,27 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
-	<title>homepage layout</title>
+	<title>layout 연습</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header id="header_wrap">
+	<!-- header -->
+	<header id="main_header" class="clearfix">
 		<h1>LOGO</h1>
 		<div class="util_menu">
-			<ul class="clearfix">
-				<li><a href="#">Login</a></li>
-				<li><a href="#">Join</a></li>
-				<li><a href="#">Contact us</a></li>
+			<!-- <ul class="clearfix"> -->
+			<ul>	
+				<li><a href="#">login</a></li>
+				<li><a href="#">join</a></li>
+				<li><a href="#">contact_us</a></li>
 				<li><a href="#">English</a></li>
 			</ul>
 		</div>
-		<nav class="gnb_wrap">
-			<ul class="clearfix">
-				<li><a href="#footer_wrap">회사소개</a></li>
+		<nav class="main_menu">
+			<!-- <ul class="clearfix"> -->
+			<ul>	
+				<li><a href="#">회사소개</a></li>
 				<li><a href="#">제품소개</a></li>
 				<li><a href="#">사업영역</a></li>
 				<li><a href="#">고객센터</a></li>
@@ -29,18 +32,14 @@
 			</ul>
 		</nav>
 	</header>
-	<div id="visual">
-		<div class="slider"></div>
-	</div>
 
-
+	<!-- content -->
 	<div id="content" class="clearfix">
-		<section id="section">section</section>
-		<aside id="aside">aside</aside>
+		<section id="main_section">section</section>
+		<section id="aside">aside</section>
 	</div>
 	
-	<footer id="footer_wrap">
-		<a href="#section">top</a> | <a href="#">section</a>
-	</footer>
+	<!-- footer -->
+	<footer id="main_footer">footer</footer>
 </body>
 </html>
