@@ -10,13 +10,48 @@
 <!-- jquery -->
 	<script>
 		$(document).ready(function(){
-			$("#big_slider").bxSlider({});
-			$("#small_slider")
+			$(".slider").bxSlider({
+				auto:true,controls:false,mode:'horizontal',pager:false
+			});
+			$(".slider01").bxSlider({
+				auto:true,controls:false,mode:'vertical'
+			});
+			$(".slider02").bxSlider({
+				auto:true,controls:false,mode:'fade'
+			});
+			$(".slider03").bxSlider({
+				auto:true,controls:false,moder:'horizontal'
+			})
+			$(".slider04").bxSlider({
+				auto:true,controls:false,moder:'vertical'
+			})
 		})
 	</script>
 <!-- style.-->
 	<style>
-		
+		*{margin:0;padding:0;}
+		img{display:block;}
+
+		div#big_slider{width: 980px;margin:0 auto;}
+
+		div#small_slider{width:980px;margin:0 auto;}
+		div#small_slider:after{content:"";clear:both;display:block;}
+		div#small_slider>.small_slider01{width:490px;float:left;}
+		div#small_slider>.small_slider02{width:490px;float:left;}
+		div#small_slider>.small_slider03{width:490px;float:left;}
+		div#small_slider>.small_slider04{width:490px;float:left;}
+
+		.bx-wrapper {
+	    	-moz-box-shadow: none;
+	    	-webkit-box-shadow: none; 
+	    	box-shadow: none;
+	    	margin-bottom: 0;
+	    	border:none;
+		}
+
+		.bx-wrapper .bx-pager.bx-default-pager a {
+			margin-bottom:45px;
+		}	
 	</style>
 </head>
 <body>
@@ -32,16 +67,30 @@
 <div id="small_slider">
 	<div class="small_slider01">
 		<ul class="slider01">
-			<li><img src="images/food01.jpg" alt=""></li>
 			<li><img src="images/food02.jpg" alt=""></li>
 			<li><img src="images/food03.jpg" alt=""></li>
+			<li><img src="images/food01.jpg" alt=""></li>
 		</ul>
 	</div>
 	<div class="small_slider02">	
 		<ul class="slider02">
+			<li><img src="images/food03.jpg" alt=""></li>
 			<li><img src="images/food01.jpg" alt=""></li>
 			<li><img src="images/food02.jpg" alt=""></li>
-			<li><img src="images/food03.jpg" alt=""></li>
+		</ul>
+	</div>
+	<div class="small_slider03">
+		<ul class="slider03">
+			<li><img src="images/food1.jpg" alt=""></li>
+			<li><img src="images/food2.jpg" alt=""></li>
+			<li><img src="images/food3.jpg" alt=""></li>
+		</ul>
+	</div>
+		<div class="small_slider04">
+		<ul class="slider04">
+			<li><img src="images/food2.jpg" alt=""></li>
+			<li><img src="images/food3.jpg" alt=""></li>
+			<li><img src="images/food1.jpg" alt=""></li>
 		</ul>
 	</div>
 </div>
