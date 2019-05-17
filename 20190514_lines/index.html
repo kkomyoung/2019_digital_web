@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		*{margin:0;padding:0;}
+		li{list-style:none;}
+		a:link,a:visited{color:black;}
+		a{text-decoration:none}
+		div.wapper{background-color:skyblue;}
+			div.menu_wrap{width: 980px;margin:0 auto;background-color:lightgray;}
+			div.menu_wrap:after{content:"";clear: both;display: block;}
+			ul.util_menu{background-color:pink;float: right;}
+			ul.util_menu:after{content:"";clear: both;display: block;}
+			ul.util_menu>li{float: left;position: relative;}
+			
+			ul.util_menu>li:after{content:"";width:1px;height:10px;background-color:#000;display: block;position: absolute;top:9px;}
+			ul.util_menu>li:first-child:after{content:"";display:none;}
+			ul.util_menu>li>a{display: block;line-height:25px;padding:0 15px;}
+		
+	</style>
+</head>
+<body>
+	<div class="wapper"> <!-- 100% -->
+		<div class="menu_wrap"> <!-- 980px -->
+			<ul class="util_menu"> <!-- float:right -->
+				<li><a href="#">menu</a></li>
+				<li><a href="#">menu</a></li>
+				<li><a href="#">menu</a></li>
+				<li><a href="#">menu</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
