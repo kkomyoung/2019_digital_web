@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>sprite</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		/*icon*/
+		div.icon_wrap{}
+		div.icon_wrap .bth{
+			width: 30px;height: 30px;
+			background-image:url(../images/icon-sprite.png);
+			text-indent:-1000px;cursor:pointer;
+			float:left;
+		}
+		div.icon_wrap .item01{background-position:0 -330px;transition:0.3s;}
+		div.icon_wrap .item02{background-position:-40px -330px;transition:0.3s;}
+		div.icon_wrap .item03{background-position:-80px -330px;transition:0.3s;}
+		div.icon_wrap .item04{background-position:-120px -330px;transition:0.3s;}
+		div.icon_wrap .item05{background-position:-160px -330px;transition:0.3s;}
+
+		div.icon_wrap .item01:hover{background-position:0 -360px;}
+		div.icon_wrap .item02:hover{background-position:-40px -360px;}
+		div.icon_wrap .item03:hover{background-position:-80px -360px;}
+		div.icon_wrap .item04:hover{background-position:-120px -360px;}
+		div.icon_wrap .item05:hover{background-position:-160px -360px;}
+
+		div.icon_wrap .item01.active{background-position:0 -360px;}
+		div.icon_wrap .item02.active{background-position:-40px -360px;} /*동일선은 붙여서 쓴다.*/
+		div.icon_wrap .item03.active{background-position:-80px -360px;}
+		div.icon_wrap .item04.active{background-position:-120px -360px;}
+		div.icon_wrap .item05.active{background-position:-160px -360px;}		
+
+		/*sns*/
+		ul.sns_wrap li{
+			width: 30px;height: 30px;border-radius:90px;
+			background-image:url(../images/icon-sprite.png);
+			text-indent:-1000px;
+			float:left;
+			opacity: 1;transition: 0.3s
+			margin-right:10px;
+			margin-bottom:50px;
+		}
+		ul.sns_wrap li:nth-child(1){background-position: -200px -450px;}
+		ul.sns_wrap li:nth-child(2){background-position: -240px -450px;}
+		ul.sns_wrap li:nth-child(3){background-position: -280px -450px;}
+
+		ul.sns_wrap li:hover{opacity: 0.3;}
+
+		ul.sns_wrap a{display:block;line-height:30px;border-radius:90px;}
+
+/*sprites*/
+		nav#sprites{margin-bottom:50px;}
+		nav#sprites .menu{
+			width: 140px;height: 50px;
+			float:left;
+			background-image:url(../images/sprites.png);
+			text-indent:-1000px;
+		}
+
+		nav#sprites .menu:nth-child(1){background-position:0 0;}
+		nav#sprites .menu:nth-child(2){background-position:-140px 0;}
+		nav#sprites .menu:nth-child(3){background-position:-280px 0;}
+		nav#sprites .menu:nth-child(4){background-position:-420px 0;}
+		nav#sprites .menu:nth-child(5){background-position:-560px 0;}
+		nav#sprites .menu:nth-child(6){background-position:-700px 0;}
+		nav#sprites .menu:nth-child(7){background-position:-840px 0;}
+
+		nav#sprites .menu:hover:nth-child(1){background-position:0 -50px;}
+		nav#sprites .menu:hover:nth-child(2){background-position:-140px -50px;}
+		nav#sprites .menu:hover:nth-child(3){background-position:-280px -50px;}
+		nav#sprites .menu:hover:nth-child(4){background-position:-420px -50px;}
+		nav#sprites .menu:hover:nth-child(5){background-position:-560px -50px;}
+		nav#sprites .menu:hover:nth-child(6){background-position:-700px -50px;}
+		nav#sprites .menu:hover:nth-child(7){background-position:-840px -50px;}
+
+		nav#sprites .menu.active:nth-child(1){background-position:0 -50px;}
+		nav#sprites .menu.active:nth-child(2){background-position:-140px -50px;}
+		nav#sprites .menu.active:nth-child(3){background-position:-280px -50px;}
+		nav#sprites .menu.active:nth-child(4){background-position:-420px -50px;}
+		nav#sprites .menu.active:nth-child(5){background-position:-560px -50px;}
+		nav#sprites .menu.active:nth-child(6){background-position:-700px -50px;}
+		nav#sprites .menu.active:nth-child(7){background-position:-840px -50px;}		
+
+/*gnb*/
+		nav#gnb{}
+		nav#gnb .menu{
+			width: 140px;height: 50px;
+			background-image:url(../images/top_gnb.png);
+			text-indent:-1000px;
+		}
+
+		nav#gnb .menu:nth-child(1){background-position:0 0;}
+		nav#gnb .menu:nth-child(2){background-position:0px -50px;}
+		nav#gnb .menu:nth-child(3){background-position:0px -100px;}
+		nav#gnb .menu:nth-child(4){background-position:0px -150px;}
+		nav#gnb .menu:nth-child(5){background-position:0px -200px;}
+		nav#gnb .menu:nth-child(6){background-position:0px -250px;}
+		nav#gnb .menu:nth-child(7){background-position:0px -300px;}
+
+		nav#gnb .menu:hover:nth-child(1){background-position:0 -350px;}
+		nav#gnb .menu:hover:nth-child(2){background-position:0px -400px;}
+		nav#gnb .menu:hover:nth-child(3){background-position:0px -450px;}
+		nav#gnb .menu:hover:nth-child(4){background-position:0px -500px;}
+		nav#gnb .menu:hover:nth-child(5){background-position:0px -550px;}
+		nav#gnb .menu:hover:nth-child(6){background-position:0px -600px;}
+		nav#gnb .menu:hover:nth-child(7){background-position:0px -650px;}
+
+		nav#gnb .menu.active:nth-child(1){background-position:0 -350px;}
+		nav#gnb .menu.active:nth-child(2){background-position:0px -400px;}
+		nav#gnb .menu.active:nth-child(3){background-position:0px -450px;}
+		nav#gnb .menu.active:nth-child(4){background-position:0px -500px;}
+		nav#gnb .menu.active:nth-child(5){background-position:0px -550px;}
+		nav#gnb .menu.active:nth-child(6){background-position:0px -600px;}
+		nav#gnb .menu.active:nth-child(7){background-position:0px -650px;}		
+	</style>
+</head>
+<body>
+	<div class="icon_wrap clearfix">
+		<!-- div.bth.item01>{icon} -->
+		<div class="bth item01 active">icon</div>
+		<div class="bth item02">icon</div>
+		<div class="bth item03">icon</div>
+		<div class="bth item04">icon</div>
+		<div class="bth item05">icon</div>
+	</div>
+	<ul class="sns_wrap clearfix">
+		<li class="bth sns01"><a href="#">facebook</a></li>
+		<li class="bth sns02"><a href="http://www.youtube.com" target="blank">youtube</a></li>
+		<li class="bth sns03"><a href="#">twitter</a></li>
+	</ul>
+	
+<!-- 	<div class="box">안녕하세요</div>
+	<div class="box1">안녕하세요</div>
+	<div class="box2">안녕하세요</div> -->
+
+	<nav id="sprites" class="clearfix">
+		<div class="menu item01"><a href="#">지역</a></div>
+		<div class="menu item02"><a href="#">쇼핑</a></div>
+		<div class="menu item03 active"><a href="#">문화</a></div>
+		<div class="menu item04"><a href="#">여행</a></div>
+		<div class="menu item05"><a href="#">레저</a></div>
+		<div class="menu item06"><a href="#">추천</a></div>
+		<div class="menu item070"><a href="#">전체보기</a></div>
+	</nav>
+
+	<nav id="gnb">
+		<div class="menu item01"><a href="#">지역</a></div>
+		<div class="menu item02"><a href="#">쇼핑</a></div>
+		<div class="menu item03 active"><a href="#">문화</a></div>
+		<div class="menu item04"><a href="#">여행</a></div>
+		<div class="menu item05"><a href="#">레저</a></div>
+		<div class="menu item06"><a href="#">추천</a></div>
+		<div class="menu item070"><a href="#">전체보기</a></div>
+	</nav>
+</body>
+</html>
