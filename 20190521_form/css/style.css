@@ -17,6 +17,7 @@ body{background-color: #cdcdcd;}
 #content fieldset{
 	border:1px solid #dadada;
 	background-color:#fff;
+	margin-bottom:10px;
 }
 #content fieldset .field{
 	border-bottom:1px solid #f0f0f0;
@@ -36,3 +37,33 @@ body{background-color: #cdcdcd;}
 #content fieldset .field .ico.mail{background-position:0 -47px;}
 #content fieldset .field .ico.pass{background-position:0 -466px;}
 #content fieldset .field .ico.pass2{background-position:0 -515px;}
+
+#content fieldset .field .btn-label{
+	display:block;width: 212px;height: 31px; border:1px solid #dcdcdc;
+	position: absolute;top: 8px; text-align:center;line-height:31px;
+	z-index:10;background-color:#fff;cursor:pointer;
+}
+#content fieldset .field .btn-label.male{left:15px;}
+#content fieldset .field .btn-label.female{left:228px;}
+
+#content fieldset .field.btn-redio{height:49px;}
+
+#content fieldset .field.btn-radio input{
+	position:relative;left:50px;top:14px;
+}
+
+#content fieldset .field.birth select{
+	width: 110px; height:29px;
+	border:0 none;font-size:15px;font-weight:bold;line-height:29px;
+	background:url(../images/sel_arr.gif) no-repeat 100% 50%;
+}
+
+#content fieldset .field.birth .field-wall{
+	width: 0;height: 29px;margin-top:10px;border-right:1px solid #f0f0f0;
+	text-indent:-99999px;
+}
+
+/*common*/
+.w458{width: 458px !important;}
+.w130{width: 130px !important;}
+.w145{width: 145px !important;}
