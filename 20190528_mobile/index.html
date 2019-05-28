@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>mobile</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		
+
+		/*#main_header*/
+		#main_header{
+			height: 45px;
+			background-image: url(img/header_background.png);
+			text-align:center;
+			position: relative;
+		}
+		
+		#main_header>h1{color:white}
+		#main_header>a.left,
+		#main_header>label.right{
+			position:absolute;display:block;
+			height: 32px;top: 7px;
+			background-image: url(img/sprites.png);
+			text-indent:-9999px;
+		}
+
+		#main_header>a.left{
+			width: 62px;left:5px;
+			background-position: 0 0;
+			text-indent:-9999px;
+		}
+		#main_header>label.right{
+			width: 32px;right:5px;
+			background-position: -62px 0;
+			text-indent:-9999px;
+		}
+
+		/*toggle_gnb*/
+		#toggle_gnb_wrap{
+/*			position: absolute;top: 45px;*/
+			padding:15px;background-color: #363636;
+		}
+		.toggle_gnb{
+			padding:5px;background-color: #fff;
+		}
+		.toggle_gnb>ul>li{float:left;}
+		.toggle_gnb>ul>li>a{
+			display:block;width: 80px;text-align:center;
+		}
+		#toggle{display:none;}
+		#toggle~#toggle_gnb_wrap{display:none;}
+		#toggle:checked~#toggle_gnb_wrap{display:block;}
+
+		/*top_gnb*/
+		#top_gnb{
+			border-bottom: 1px solid #000;
+			background-color: #b42111;
+		}
+		#top_gnb>div{float:left;width: 25%;}
+		#top_gnb>div>a{
+			display:block;
+			text-align:center;
+			line-height:35px;
+			color:#fff;
+		}
+
+		/*bottom_gnb*/
+		#bottom_gnb{
+			width: 100%;display:table;
+			border-bottom:1px solid #000;
+		}
+		#bottom_gnb>div{
+			display:table-cell;
+		}
+		#bottom_gnb>div>a{
+			display:block;
+			line-height: 35px;
+			text-align:center;
+			position:relative;
+		}
+		#bottom_gnb>div>a:after{
+			content:"";display:block;
+			position: absolute;width: 1px;height: 15px;
+			border-left:1px solid #000; top:11px;
+			left:-1px;
+		}
+
+	</style>
+	<script>
+		var num=0;
+		document.write(num);
+	</script>
+
+	<script>
+		var num=1;
+		document.write(num);
+	</script>
+
+
+</head>
+<body>
+	<script>
+		var num=2;
+		document.write(num);
+	</script>
+	<div id="wrap">
+		<input type="checkbox" id="toggle">
+		<header id="main_header" class="clearfix">
+			<a href="#" class="left">main</a>
+			<h1>Mobile</h1>
+			<label for="toggle" class="right">Toggle</label>
+		</header>
+		<div id="toggle_gnb_wrap">
+			<div class="toggle_gnb">
+				<ul class="clearfix">
+					<li><a href="#">menu1</a></li>
+					<li><a href="#">menu2</a></li>
+					<li><a href="#">menu3</a></li>
+					<li><a href="#">menu4</a></li>
+					<li><a href="#">menu5</a></li>
+					<li><a href="#">menu6</a></li>
+					<li><a href="#">menu7</a></li>
+					<li><a href="#">menu8</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<nav id="top_gnb" class="clearfix">
+			<div><a href="#">menu1</a></div>
+			<div><a href="#">menu2</a></div>
+			<div><a href="#">menu3</a></div>
+			<div><a href="#">menu4</a></div>
+		</nav>
+
+		<nav id="bottom_gnb">
+			<div><a href="#" onclick="alert('안녕하세요');">button</a></div>
+			<div><a href="#">button</a></div>
+			<div><a href="#">button</a></div>
+			<div><a href="#">button</a></div>
+			<div><a href="#">button</a></div>
+			<div><a href="#">button</a></div>
+		</nav>
+
+		<section class="main_section">
+			<header id="section_header">
+				<h2>Lorem ipsum.</h2>
+				<time>2019-12-4 - Birthday</time>
+			</header>
+			<article id="section_article">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ad quaerat quia fugit doloribus alias atque consequuntur, labore dignissimos, similique. Accusamus incidunt ipsam expedita reiciendis temporibus deleniti cum, odit fuga quo excepturi aliquid dignissimos nobis error natus eaque deserunt est illo earum, ipsa neque, maxime voluptatibus! Eveniet, neque nemo odio!
+				</p>
+				<p>Quod numquam fugit dolorem vitae illo temporibus dolores doloremque laudantium ratione consequatur ea nulla tenetur et adipisci corporis explicabo vero harum ducimus dignissimos ipsam aut, possimus aliquam itaque accusantium, quae! Necessitatibus facere inventore hic molestias tenetur consequuntur veritatis architecto soluta beatae! Temporibus, voluptates quia deserunt optio aspernatur nihil. Id, a.
+				</p>
+				<p>Quam cumque ab excepturi odio labore porro reiciendis perferendis ipsum, totam saepe delectus vel, eaque corporis a minus praesentium eum modi. Tempora exercitationem eveniet amet eum debitis quidem repellendus. Cupiditate assumenda cumque natus consequuntur ipsum, accusamus corporis repudiandae dicta animi, repellendus eius non beatae eligendi hic ratione quas iste impedit!
+				</p>
+			</article>
+		</section>
+
+		<footer id="main_footer">
+			<h3>html15 +css</h3>
+			<address>website layout basic</address>
+		</footer>
+	</div>
+	<script>
+		var num=3;
+		document.write("안녕하세요. "+num+"명 입니다.");
+	</script>
+</body>
+</html>
