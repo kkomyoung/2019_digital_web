@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>practice</title>
+	<link rel="stylesheet" href="../css/reset.css">
+</head>
+<style>
+	#main_header{
+		height: 56px;background-color: #da291c;
+		text-align:center;
+		position:relative;
+	}
+	#main_header>label.menu{
+		position:absolute; left:16px; top:22px;
+		width: 18px;height: 12px;
+		background-image: url(img/menu.png);
+		background-position:0 0;
+		text-indent:-9999px;
+	}
+	
+	#main_header>a.logo{
+		display:block;
+		position: absolute; top:15px; left: 48%;
+		width: 35px;height: 26px;
+		background-image:url(img/logo.png);
+		background-position:0 0;
+		text-indent:-9999px;
+	}
+	#main_header>a.search{
+		display:block;
+		position: absolute; right:16px; top:19.5px;
+		width: 17px;height: 17px;
+		background-image: url(img/search.png);
+		background-position:0 0;
+		text-indent:-9999px;
+	}
+
+
+
+
+</style>
+<body>
+	<div id="wrap">
+		<input type="checkbox" id="toggle">
+		<header id="main_header">
+			<label for="toggle" class="menu">menu</label>
+			<a href="#" class="logo">logo</a>
+			<a href="#" class="search">search</a>
+		</header>
+
+	</div>
+	
+</body>
+</html>
