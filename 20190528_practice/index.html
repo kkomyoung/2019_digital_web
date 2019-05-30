@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>practice</title>
+</head>
+<style>
+	*{padding:0;margin:0;box-sizing:border-box;}
+	li{list-style:none;}
+	a:link,a:visited{color:black;}
+	a{text-decoration:none;}
+	.clearfix:after{content:"";clear:both;display:block;}
+/*header*/
+	#main_header{
+		height: 56px;background-color: #da291c;
+		text-align:center;
+		position:relative;
+	}
+	#main_header>label.menu{
+		position:absolute; left:16px; top:22px;
+		width: 18px;height: 12px;
+		background-image: url(img/menu.png);
+		background-position:0 0;
+		text-indent:-9999px;
+		cursor:pointer;
+	}
+	
+	#main_header>a.logo{
+		display:block;
+		position: absolute; top:15px; left: 48%;
+		width: 35px;height: 26px;
+		background-image:url(img/logo.png);
+		background-position:0 0;
+		text-indent:-9999px;
+	}
+	#main_header>a.search{
+		display:block;
+		position: absolute; right:16px; top:19.5px;
+		width: 17px;height: 17px;
+		background-image: url(img/search.png);
+		background-position:0 0;
+		text-indent:-9999px;
+	}
+
+/*click	*/
+	#toggle{display:none;}
+	#toggle~#toggle_menu_wrap{display:none;}
+	#toggle:checked~#toggle_menu_wrap{display:block;}
+	
+
+/*toggle_menu*/
+	#toggle_menu_wrap{
+		width: 306px;height: 616px;
+		position: relative;
+	}
+	
+	.toggle_menu_top{
+		height: 56px;background-color: #212121;
+		position: relative;
+	}
+	.toggle_menu_top .logo{
+		display:block;
+		color:white;
+		position: absolute; left:16px;top: 14.5px;
+		background-image: url(img/menu.jpg);
+		background-position: -15px -37px;
+		width: 36px;height: 27px;
+		text-indent:-9999px;
+
+
+
+	}
+	label.close{
+		display:block;
+		color:white;
+		position: absolute; right:16px; top:20.5px;
+		background-image: url(img/menu.jpg);
+		background-position: -275px -42px;
+		width: 15px;height: 15px;
+		text-indent:-9999px;
+		cursor:pointer;
+
+	}
+
+	#toggle_menu_wrap{
+		position:absolute;top: 0;
+		background-color:white;
+	}
+	#toggle_menu>li{
+		width: 306px;
+		border-bottom:2px solid #ebebeb;
+	}
+	#toggle_menu>li>a{
+		display:block;
+		font-size:16pt;
+		font-weight:bold;
+		line-height:60px;
+		padding-left:16px;
+
+	}
+
+	.login_button{
+		display:block;
+		position: absolute; bottom:26px; left:16px;
+		background-image: url(img/menu.jpg);
+		background-position: -15px -584px;
+		width: 82px;height: 30px;
+		text-indent:-9999px;
+	}
+
+	#bg{
+		background-image: url(img/bg.jpg);
+		background-position:0 -80px;
+		height: 1205px;
+		background-repeat: no-repeat;
+		text-indent:-9999px;
+	}
+
+</style>
+<body>
+	<div id="wrap">
+		<input type="checkbox" id="toggle">
+<!-- header -->
+		<header id="main_header">
+			<label for="toggle" class="menu">menu</label>
+			<a href="#" class="logo">logo</a>
+			<a href="#" class="search">search</a>
+		</header>
+<!-- toggle_menu -->
+		<div id="toggle_menu_wrap">
+			<div class="toggle_menu_top">
+				<a href="#" class="logo">로고</a>			
+				<label for="toggle" class="close">닫기</label>
+			</div>
+			<ul id="toggle_menu">
+				<li><a href="#">메뉴소개</a></li>
+				<li><a href="#">매장찾기</a></li>
+				<li><a href="#">새소식</a></li>
+				<li><a href="#">맥도날드 이야기</a></li>
+				<li><a href="#">인재채용</a></li>
+			</ul>
+			<a href="#" class="login_button">login</a>
+		</div>
+<!-- bg	 -->
+		<div id="bg">이미지</div>
+	</div>
+	
+</body>
+</html>
