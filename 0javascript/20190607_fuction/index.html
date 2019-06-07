@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		var result=0;
+		function dan(han){
+			
+			for(var i=1;i<10;i++){
+				result = han * i;
+				document.write(han + " x "+ i + " = " + result + "<br>");
+				// document.write(han + " x 1 = " + han*1 + "<br>");
+			}
+		}
+
+
+		function printMsg(name,age){
+			document.write("학생이름 : " + name + "<br>");
+			document.write("학생나이 : " + age + "<br>");
+		}
+
+		var printM = function(mbr){
+			document.write(mber);
+		}
+	</script>
+	<style>
+		div{float:left;padding:10px;}
+	</style>
+</head>
+<body>
+	<button type=button onclick="dan(3);">3단 출력</button>
+	<button type=button onclick="printMsg('홍길동',25);">홍길동</button>
+	<button type=button onclick="printM(10);">엠버튼</button>
+</body>
+</html>
