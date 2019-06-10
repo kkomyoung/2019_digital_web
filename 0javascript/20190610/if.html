@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>if문 연습</title>
+	<script>
+		var point = 100;
+		var grade ="";
+		var comment ="";
+		if(point>100){
+			comment = "0~100점 사잇값을 입력하십시오.";
+		}else if(point>=90){
+			grade = "A";
+		}else if(point>=80){
+			grade = "B";
+		}else if(point>=70){
+			grade = "C";
+		}else if(point>=60){
+			grade = "D";
+		}else{
+			grade = "F";
+		}
+
+	</script>
+
+</head>
+<body>
+	<h1>성적</h1>
+	<script>
+		document.write("당신의 성적은 " + grade + " 입니다.")
+		document.write(comment)
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>for문 연습</title>
+	<script>
+		var result;
+		var sum = 1;
+		for(var i=1;i<10;i++){
+			result = sum+i;
+			document.write(sum + " + " + i + " = " + result + "<br>");
+		}
+
+
+
+
+		// for(var i=0;i<5;i++){
+		// 	var result = "";
+		// 	for(var k=0;k<=i;k++){
+		// 	result += "*";
+		// 	}
+		// 	document.write(result+"<br>");
+		// }
+
+
+		var sum = 0;
+		for(var z=1;z<=10;z++){
+			sum+=z; //sum = sum+z
+		}
+		document.write(sum + "<br>");
+
+
+		var total = 0;
+		for(var a=1;a<=10;a++){
+			//document.write(a + "<br>");
+			var result = "";
+			for(var b=1;b<=a;b++){
+				result = result + b;
+				if(b != a) result = result + "+"
+				total = total + b;
+			}
+
+			document.write(result+ "=" + total +"<br>");
+			total = 0;
+
+			// total = total + a;
+
+			// document.write(total+"<br>")
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
