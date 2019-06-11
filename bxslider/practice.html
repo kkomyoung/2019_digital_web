@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=">
+	<meta charset="UTF-8">
+	<title>visual slider</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			 var mainslider=$('.slider').bxSlider({
+				touchEnable:false,
+				controls:false,
+				pagerCustom:'.bx-pager'
+			});
+			$('.prevBtn').click(function(){
+				mainslider.goToPrevSlide();
+				return false;
+			});
+			$('.nextBtn').click(function(){
+				mainslider.goToNextSlide();
+				return false;
+			});
+		});
+	</script>
+
+	<style>
+		.bx-wrapper {
+		    -moz-box-shadow: none;
+		    -webkit-box-shadow: none;
+		    box-shadow: none;
+		    border: 0px none;
+		    background: #fff;
+		    margin-bottom: 0;
+		}
+
+
+		.main_slider{width: 1200px;margin:0 auto;position: relative;}
+
+		.slider{}
+		.slider li{}
+		.slider h2{
+			text-align:center;color:#fff;
+			font-size:2em;position:absolute;top:140px;left:515px;}
+		.slider p:before{
+			content:"";display:block;
+			border-top:1px solid #fff;
+			padding-top:5px;
+		}
+		.slider p{color:#fff; position:absolute;top:190px;left:380px;}
+
+		.btn_more{
+			position: absolute;top:310px;
+			left:500px;color:white;
+			border: 1px solid #fff;
+			padding:7px 50px;
+		}
+		.btn_more:hover{cursor:pointer; background-color: #fff; color:#000;}
+
+		.prevBtn,.nextBtn{position: absolute; top:200px;}
+		.prevBtn{left: 10px;}
+		.nextBtn{right: 10px;}
+
+		/*pager custom*/
+		.main_slider_pager{width: 1200px;margin:0 auto;border: 1px solid #000;}
+		.bx-pager a{
+			display:block;width: 33.33%;text-align:center;float:left;line-height: 50px;border-right: 1px solid black;
+			}
+		.bx-pager a:last-child{border-right: 0 none;}
+		a.active{background-color:#000;color:white;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="main_slider">
+			<ul class="slider">
+				<li>
+					<img src="../images/pc01.jpg" alt="menu1"></img>
+					<h2>GALAXY</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<div class="btn_more">more+</div>
+				</li>
+				<li>
+					<img src="../images/pc02.jpg" alt="menu1"></img>
+					<h2>GALAXY</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<div class="btn_more">more+</div>
+				</li>
+				<li>
+					<img src="../images/pc03.jpg" alt="menu1"></img>
+					<h2>GALAXY</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<div class="btn_more">more+</div>
+				</li>
+			</ul>
+			<div class="prevBtn"><a href=""><img src="images/btn_prev.png" alt="prevBtn"></a></div>
+			<div class="nextBtn"><a href=""><img src="images/btn_next.png" alt="nextBtn"></a></div>
+		</div>
+		<div class="main_slider_pager">
+			<div class="bx-pager clearfix">
+				<a href="#" data-slide-index="0">menu1</a>
+				<a href="#" data-slide-index="1">menu2</a>
+				<a href="#" data-slide-index="2">menu3</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
