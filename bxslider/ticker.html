@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>ticker</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			var ticker = $('.slider').bxSlider({
+				mode:'vertical',
+				controls:false,
+				pager:false,
+				auto:true
+			});
+			$('.prevBtn').click(function(){
+				ticker.goToPrevSlide();
+				return false;
+			});
+			$('.nextBtn').click(function(){
+				ticker.goToNextSlide();
+				return false;
+			});
+		});	
+	</script>
+
+	<style>
+		.bx-wrapper {
+		    -moz-box-shadow: none;
+		    -webkit-box-shadow: none;
+		    box-shadow: none;
+		    border: 0px none;
+		    background: none;
+		}
+
+
+
+		body{background-color:#cdcdcd;}
+
+		.wrap{width: 910px;position: relative;margin:0 auto;}
+		.slider>div{height: 80px;position: relative;}
+		.slider .iconPhoto{
+			width:50px;height:50px;
+			border-radius:25px;
+			background-color:white;
+			text-indent:-9999px;
+			background:red url(../images/testimg.jpg) no-repeat center;
+		}
+		.slider .title{
+			width:300px;line-height:25px;
+			font-size:1.2em;
+			font-weight:bold;
+			position: absolute;left:60px;top:0;
+		}
+		.slider .subject{
+			width: 800px;line-height:40px;
+			background-color: #fff;
+			border-radius:20px;
+			padding:5px 20px;
+			position: absolute;left:60px;bottom:0;
+		}
+		.slider .subject:after{
+			content:"";
+			border-width:10px;
+			border-style:solid;
+			/*border-color:red orange yellow green;*/
+			border-color:transparent white transparent transparent;
+			position: absolute;left:-23px;top:15px;
+			cursor:pointer;
+		}
+		.btn{position:absolute;top:31px;right:0px;}
+		.btn img{display:block;margin-bottom:5px;}
+		.btn .prevBtn,.btn .nextBtn{cursor:pointer;}
+
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="slider">
+			<div>
+				<div class="iconPhoto">사진</div>
+				<div class="title">컴퓨터학과</div>
+				<div class="subject">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+			</div>
+			<div>
+				<div class="iconPhoto">사진</div>
+				<div class="title">디지털미디어</div>
+				<div class="subject">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+			</div>		
+		</div>
+		<div class="btn">
+			<div class="prevBtn"><img src="images/prevbtn.jpg" alt="prevBtn"></div>
+			<div class="nextBtn"><img src="images/nextbtn.jpg" alt="nextBtn"></div>
+		</div>
+	</div>
+			
+</body>
+</html>
