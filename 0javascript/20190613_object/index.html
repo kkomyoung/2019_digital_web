@@ -12,9 +12,9 @@
 	</style>
 </head>
 <body>
-	<div id="var1">
-		
-	</div>
+	<div id="var1">11</div>
+	<div id="var2">22</div>
+	<div id="var3">33</div>
 
 	<button type="button" onclick="inputCar1()">버튼1</button>
 	<button type="button" onclick="inputCar2()">버튼2</button>
@@ -39,10 +39,80 @@
 			document.getElementById('var1').innerHTML = "차명은 : "+car[0];
 			document.getElementById('var1').style.backgroundColor = color[2];
 		}
-		
+
+
+		//20190614
+
+		var car = ['sonata',100,'white']; //배열
+
+		var myCar = {name:'sonata',speed:100,color:'white'} //객체
+
+		document.write(myCar['name']);
+
+		// document.getElementById('var1').innerHTML = myCar.name;
+		// document.getElementById('var2').innerHTML = myCar.speed;
+		// document.getElementById('var3').innerHTML = myCar.color;
 
 		
 	</script>
-	
+
+	<div id="msg1">1212121212121</div>
+
+	<button type="button" onclick="objTitle()">명령어</button>
+	<script>
+		var obj = {
+			a:function(){
+				return "hellow sonata";
+			},
+			b:function(x){
+				var result = x;
+				return result;
+			},
+			c:function(x,y){
+				var result = x+y;
+				return result;
+			}
+		};
+
+		document.getElementById("msg1").innerHTML = obj.a();
+		// obj.b(100)
+
+		// var car = {name:'sonata',speed:100}
+	</script>
+	<div id="carname"></div>
+	<div id="carcolor"></div>
+	<div id="carspeed"></div>
+
+	<script>
+		var yourCar = {
+			name:'sonata',
+			speed:50,
+			color:'white',
+			start:function(x){
+				return this.speed + x;
+			}
+		}
+
+		yourCar.name;
+		yourCar.color;
+		yourCar.start();
+
+		document.getElementById("carname").innerHTML = yourCar.name;
+		document.getElementById("carcolor").innerHTML = yourCar.color;
+		document.getElementById("carspeed").innerHTML = yourCar.start(200);
+
+		var backColor = ["blue","red","white"];
+
+		var docBody = document.getElementsByTagName("body")[0];
+
+		function backColorBlue(x){
+			docBody.style.backgroundColor = backColor[x];
+		// document.getElementsByTagName("body")[0].style.backgroundColor = backColor[0];
+	}
+	</script>
+
+	<button type="button" onclick="backColorBlue(0)">파란색</button>
+	<button type="button" onclick="backColorBlue(1)">빨간색</button>
+	<button type="button" onclick="backColorBlue(2)">되돌리기</button>
 </body>
 </html>
