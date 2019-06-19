@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animation2</title>
+	<style>
+		.box{
+			width: 200px;height: 200px;
+			background-color: orange;
+			position: relative;
+		}
+
+		.bar1,.bar2,.bar3,.bar4{
+			animation-duration:0.5s;
+			animation-timing-function:linear;
+			animation-fill-mode:forwards;
+		}
+
+		.bar1{
+			height: 5px;
+			background-color: black;
+			animation-name:bar1;
+		}
+
+		
+		@keyframes bar1{
+			from{width: 0;}
+			to{width: 200px;}
+		}
+
+		.bar2{
+			width: 5px;
+			background-color: red;
+			position: absolute;right: 0;top: 0;
+			animation-delay:0.5s;
+			animation-name:bar2;
+			}
+
+		@keyframes bar2{
+			from{height: 0;}
+			to{height: 200px;}
+			
+		}
+
+		.bar3{
+			height: 5px;
+			background-color: lightgreen;
+			position: absolute;bottom: 0;right:0;
+			animation-delay:1s;
+			animation-name:bar3;
+				}
+
+		@keyframes bar3{
+			from{width: 0;}
+			to{width: 200px;}
+			
+
+		}
+
+		.bar4{
+			width: 5px;
+			background-color: blue;
+			position: absolute;left: 0;bottom: 0;
+			animation-delay:1.5s;
+			animation-name:bar4;
+				}
+
+		@keyframes bar4{
+			from{height: 0;}
+			to{height: 200px;}
+			
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+		<div class="bar4"></div>
+	</div>
+
+	
+</body>
+</html>
