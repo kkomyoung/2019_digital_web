@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>event2</title>
+	<script>
+		function init(){
+			var p = document.getElementById("p")
+			p.onmouseover = over;
+			p.onmouseover = out;
+		}
+
+		function over(){
+			p.style.backgrouondColor = "orchid";
+		}
+
+		function out(){
+			p.style.backgroundColor = "white"
+		}
+	</script>
+</head>
+<body onload="init()">
+	<h2>1.html태그에 리스너 작성</h2>
+	<p onmouseover="this.style.backgroundColor='orchid'" onmouseout="this.style.backgroundColor='white'">
+	마우스를 올리면 색변경
+	</p>
+</body>
+</html>
