@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>onclick event</title>
+	<script>
+		function calculate(){
+			var exp = document.getElementById("exp");
+			var result = document.getElementById("result")
+			result.value = exp.value;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		식<input type="text" id="exp"><br>
+		값<input type="text" id="result"><br>
+		<input type="button" value="계산" onclick="calculate()">
+	 	<!-- <div onclick="">계산</div> -->
+	</form>
+</body>
+</html>
