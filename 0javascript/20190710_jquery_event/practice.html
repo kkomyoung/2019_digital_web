@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		.tabWrap{width:500px; margin:0 auto;}
+		.tabWrap ul{}
+		.tabWrap ul li{
+			float:left;width: 20%;line-height:40px;text-align:center;
+			border-right: 1px solid gray;cursor:pointer;
+		}
+		.tabWrap ul li:first-child{border-left: 1px solid gray;}
+		.tabWrap ul li:hover{background-color: pink;}
+
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".boxWrap > div").hide();
+			$(".boxWrap > div").eq(0).show();
+
+			$(".tabWrap > ul > li").click(function(){
+				var hi = $(this).index();
+				console.log(hi);
+				$(".boxWrap > div").hide();
+				$(".boxWrap > div").eq(hi).show();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="tabWrap">
+		<ul class="clearfix">
+			<li>menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+		<div class="boxWrap">
+			<div class="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo veniam porro quae animi maiores! Repudiandae ratione aspernatur eveniet, praesentium amet?</div>
+			<div class="box2">Earum asperiores fugiat eos saepe qui necessitatibus, praesentium nobis perspiciatis architecto adipisci officiis laboriosam, vel vitae minima dolorum, officia iure.</div>
+			<div class="box3">Unde magnam quasi labore eos! Amet ut officia dolor voluptatibus aperiam, voluptas! Nemo veniam voluptates, ducimus tempore cum, voluptatem ipsam.</div>
+			<div class="box4">Repellendus numquam, sint. Corrupti quae quo provident, repudiandae id nemo placeat! Autem adipisci illo officiis voluptas impedit, quos officia. Officia.</div>
+			<div class="box5">Earum repellendus natus possimus accusantium voluptatum fugit eaque harum alias dicta, laborum in, saepe tenetur at magnam explicabo, perspiciatis aut!</div>
+		</div>
+	</div>
+</body>
+</html>
