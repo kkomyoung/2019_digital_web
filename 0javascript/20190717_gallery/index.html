@@ -8,28 +8,51 @@
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<style>
 		#gallery{width:824px;height: 595px;margin:20px auto;background-color:gray;}
-		#image{width:760px;height:470px;margin:0 auto;}
+		#image{width: 760px;height: 470px;margin:0 auto;}
 		#image p{display:none;}
-
-		#thumbnail{width: 824px;height:95px;margin-top:30px;background-color: skyblue;position:relative;}
-		#thumbnail div{float:left;}
-		#thumbnail .left{position: absolute;left:0;top: 30px;width: 33px;height: 95px;cursor:pointer; text-align:center;}
-		#thumbnail .right{position: absolute;right:0;top: 30px;width: 33px;height: 95px;cursor:pointer;}
-
-		#thumbnail .container{width: 760px;height: 95px;overflow:hidden;position: relative;left: 33px;}
+		#thumbnail{width: 824px;height: 95px;margin-top:30px;background-color:skyblue;position: relative;}
+		#thumbnail div{float: left;}
+		#thumbnail .left{position:absolute;left:0;top:30px;width: 33px;height: 95px;cursor:pointer;text-align:center;}
+		#thumbnail .right{position:absolute;right:0;top:30px;width: 33px;height: 95px;cursor:pointer;text-align:center;}
+		#thumbnail .container{width: 760px;height: 95px;position: relative;left:33px;overflow: hidden;}
 		#thumbnail .container ul{position: absolute;width:2280px;}
-		#thumbnail .container ul li{float:left;width:120px;height: 95px;margin-left:8px;}
+		#thumbnail .container ul li{float: left;width: 120px;height: 95px;margin-left:8px;}
 		#thumbnail .container .ml0{margin-left:0;}
+		
 	</style>
 	<script>
 		$(function(){
 			$(".thumb").click(function(){
 				var i = $(this).index();
 				console.log(i);
-				// $("#image>p").css("display","none");
-				// $("#image>p").eq(i).css("display","block");
+				// $("#image > p").css("display","none");
+				// $("#image > p").css("display","none").eq(i).css("display","block");
 				$("#image > p").hide().eq(i).show();
 			});
+			//$(".right").on("click",function(){});
+			var current = 0;
+			$(".right").click(function(){
+				if(current <= 3) { 
+					current++; 
+					if(current == 3){current = 0;}
+				}
+				//current = current + 1;
+				move();
+			});
+			$(".left").click(function(){
+				if(current >= 0) { 
+					current--;
+					if(current == -1){current = 2;}
+				} 
+				//current = current - 1;
+				move();
+			});
+			function move(){
+				var num = current * 760 * -1;
+				console.log(num);
+				//$(".container > ul").css("left",num);
+				$(".container > ul").animate({left:num});
+			}
 		});
 	</script>
 </head>
@@ -60,7 +83,8 @@
 				<img src="gallery/btn_left.gif" alt="">
 			</div>
 			<div class="container">
-				<ul>
+				<ul class="clearfix">
+					<!-- li.thumb*17>img[src="gallery/thumb$.jpg"]+{$} -->
 					<li class="thumb ml0"><img src="gallery/thumb0.jpg" alt="">0</li>
 					<li class="thumb"><img src="gallery/thumb1.jpg" alt="">1</li>
 					<li class="thumb"><img src="gallery/thumb2.jpg" alt="">2</li>
