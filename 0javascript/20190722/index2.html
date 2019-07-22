@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		.wrap{}
+		.tab_wrap{width: 700px;height:50px;margin:0 auto;margin-top:50px;}
+		.tab_wrap>ul>li{
+			width:20%;line-height:50px;background-color: lightgray;
+			float:left;text-align:center;border-radius: 15px 15px 0 0;
+			color:gray;
+		}
+		.tab_wrap>ul>li.on{background-color:pink;font-weight:bold;color:black;}
+		.container{
+			overflow:hidden;
+			width: 700px;height: 300px;background-color: yellow;
+			margin:0 auto;position: relative;
+		}
+		.txt_wrap{width: 3500px;position: absolute;}
+		.container>.txt_wrap>div{float:left;width: 700px;}
+
+
+	</style>
+	<!-- var i = $(this).index();
+	move = i * 500 * -1
+	$("선택자").stop().animate({left:move}) -->
+	<script>
+		$(document).ready(function(){
+			$(".tab_wrap>ul>li").click(function(){
+
+				$(".tab_wrap>ul>li").removeClass();
+				$(this).addClass("on");
+
+
+				var i = $(this).index();
+				move = i * 700 * -1;
+				$(".txt_wrap").stop().animate({left:move});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="tab_wrap">
+			<ul class="clearfix">
+				<li class="on">Today</li>
+				<li>Story</li>
+				<li>Life</li>
+				<li>Twitter</li>
+				<li>Game</li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="txt_wrap clearfix">
+				<div>1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ratione ipsum deleniti consequuntur fuga, incidunt iure asperiores, a, iusto debitis atque voluptatibus deserunt, molestias. Unde modi eligendi totam, sapiente ratione tenetur magnam laudantium, at rerum! Quis eveniet aliquam cumque veritatis ducimus, officia cupiditate, distinctio nisi aspernatur soluta dolores velit eaque ipsam facilis, repudiandae id sunt blanditiis sed hic mollitia perferendis? Accusamus, unde. Harum iste soluta aperiam odio quidem doloremque ipsa recusandae accusantium, at iure dolor enim minus nihil, numquam tempora quasi veniam maiores voluptas nisi magni quam illum? Tempore reiciendis repellendus architecto. Expedita explicabo perspiciatis in veniam repellendus, dicta possimus!</div>
+				<div>2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ratione ipsum deleniti consequuntur fuga, incidunt iure asperiores, a, iusto debitis atque voluptatibus deserunt, molestias. Unde modi eligendi totam, sapiente ratione tenetur magnam laudantium, at rerum! Quis eveniet aliquam cumque veritatis ducimus, officia cupiditate, distinctio nisi aspernatur soluta dolores velit eaque ipsam facilis, repudiandae id sunt blanditiis sed hic mollitia perferendis? Accusamus, unde. Harum iste soluta aperiam odio quidem doloremque ipsa recusandae accusantium, at iure dolor enim minus nihil, numquam tempora quasi veniam maiores voluptas nisi magni quam illum? Tempore reiciendis repellendus architecto. Expedita explicabo perspiciatis in veniam repellendus, dicta possimus!</div>
+				<div>3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ratione ipsum deleniti consequuntur fuga, incidunt iure asperiores, a, iusto debitis atque voluptatibus deserunt, molestias. Unde modi eligendi totam, sapiente ratione tenetur magnam laudantium, at rerum! Quis eveniet aliquam cumque veritatis ducimus, officia cupiditate, distinctio nisi aspernatur soluta dolores velit eaque ipsam facilis, repudiandae id sunt blanditiis sed hic mollitia perferendis? Accusamus, unde. Harum iste soluta aperiam odio quidem doloremque ipsa recusandae accusantium, at iure dolor enim minus nihil, numquam tempora quasi veniam maiores voluptas nisi magni quam illum? Tempore reiciendis repellendus architecto. Expedita explicabo perspiciatis in veniam repellendus, dicta possimus!</div>
+				<div>4Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ratione ipsum deleniti consequuntur fuga, incidunt iure asperiores, a, iusto debitis atque voluptatibus deserunt, molestias. Unde modi eligendi totam, sapiente ratione tenetur magnam laudantium, at rerum! Quis eveniet aliquam cumque veritatis ducimus, officia cupiditate, distinctio nisi aspernatur soluta dolores velit eaque ipsam facilis, repudiandae id sunt blanditiis sed hic mollitia perferendis? Accusamus, unde. Harum iste soluta aperiam odio quidem doloremque ipsa recusandae accusantium, at iure dolor enim minus nihil, numquam tempora quasi veniam maiores voluptas nisi magni quam illum? Tempore reiciendis repellendus architecto. Expedita explicabo perspiciatis in veniam repellendus, dicta possimus!</div>
+				<div>5Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ratione ipsum deleniti consequuntur fuga, incidunt iure asperiores, a, iusto debitis atque voluptatibus deserunt, molestias. Unde modi eligendi totam, sapiente ratione tenetur magnam laudantium, at rerum! Quis eveniet aliquam cumque veritatis ducimus, officia cupiditate, distinctio nisi aspernatur soluta dolores velit eaque ipsam facilis, repudiandae id sunt blanditiis sed hic mollitia perferendis? Accusamus, unde. Harum iste soluta aperiam odio quidem doloremque ipsa recusandae accusantium, at iure dolor enim minus nihil, numquam tempora quasi veniam maiores voluptas nisi magni quam illum? Tempore reiciendis repellendus architecto. Expedita explicabo perspiciatis in veniam repellendus, dicta possimus!</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
