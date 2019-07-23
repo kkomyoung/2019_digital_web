@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<title>문서 제목</title>
+	<style>
+		.tab_wrap{width: 800px;margin:15px auto;}
+
+		.tab{background-color: #2c2d31;width: 800px;height: 35px;}
+		.tab>img{float:left;}
+		.tab>ul{float:left;}
+		.tab>ul>li{
+			float:left; width: 100px;line-height:35px;
+			text-align:center;color:white;font-weight:bold;
+		}
+		.tab>ul>li.active{color:#2c2d31;background-color: #fff;}
+
+		.contents{
+			background-color: #fbfbfb;width: 100%;height: 110px;
+		}
+		.contents>ul>li{float:left;padding:10px 0px;}
+		.contents>.btn{float:right;cursor:pointer;}
+
+		.contents>ul{display:none;}
+		.contents>ul:nth-child(1){display:block;}
+	</style>
+	<script>
+		$(document).ready(function(){
+
+			var sCount = $(".contents ul").eq(0).find("li").length;
+			console.log(sCount);
+			$(".sCount").html(sCount);
+
+			$(".tab>ul>li").click(function(){
+				on=$(this).index()
+				$(".tab>ul>li").removeClass();
+				$(this).addClass("active");
+
+				$(".contents>ul").hide();
+				$(".contents>ul").eq($(this).index()).fadeIn();
+				$(".contents").show();
+
+			sCount = $(".contents ul").eq(on).find("li").length;
+			console.log(sCount);
+			$(".sCount").html(sCount);
+			});
+			$(".btn").click(function(){
+				$(".contents").hide();
+				$(".tab>ul>li").removeClass();
+			});
+
+			
+		});
+	</script>
+</head>
+<body>
+	<div class="tab_wrap clearfix">
+		<div class="tab">
+			<img src="img/tab_logo.jpg" alt="logo">
+			<ul class="clearfix">
+				<li class="active">승용</li>
+				<li>견적</li>
+				<li>상담</li>
+				<li>이벤트</li>
+			</ul>
+		</div>
+		<div class="contents">
+			<ul>
+				<li><img src="img/car1_01.gif" alt="img"></li>
+				<li><img src="img/car1_02.gif" alt="img"></li>
+				<li><img src="img/car1_03.gif" alt="img"></li>
+				<li><img src="img/car1_04.gif" alt="img"></li>
+				<li><img src="img/car1_05.gif" alt="img"></li>
+				<li><img src="img/car1_06.gif" alt="img"></li>
+			</ul>
+			<ul>
+				<li><img src="img/consult_01.gif" alt="img"></li>
+				<li><img src="img/consult_02.gif" alt="img"></li>
+				<li><img src="img/consult_03.gif" alt="img"></li>
+				<li><img src="img/consult_04.gif" alt="img"></li>
+				
+			</ul>
+			<ul>
+				<li><img src="img/estimate_01.gif" alt="img"></li>
+				<li><img src="img/estimate_02.gif" alt="img"></li>
+				<li><img src="img/estimate_03.gif" alt="img"></li>
+				<li><img src="img/estimate_04.gif" alt="img"></li>
+			</ul>
+			<ul>
+				<li><img src="img/event_01.gif" alt="img"></li>
+				<li><img src="img/event_02.gif" alt="img"></li>
+			</ul>
+			<img src="img/x.jpg" alt="x" class="btn">
+			<div class="sCount"></div>
+		</div>
+
+	</div>
+	
+</body>
+</html>
