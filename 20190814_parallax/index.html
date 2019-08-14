@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>parallax</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		html,body{height:100%;}
+		.scene{
+			width: 100%;height:100%;
+			background-attachment: fixed; /*<- 모바일에서는 안된다.*/
+			background-position:center;
+			-webkit-background-size: cover;
+			background-size: cover;
+			position:relative;
+		}
+		.scene.one{
+			background-image: url(../images/pc01.jpg);
+		}
+		.scene.two{
+			background-image: url(../images/pc02.jpg);
+		}
+		.scene.three{
+			background-image: url(../images/pc03.jpg);
+		}
+		.scene div{
+			color:white;width: 600px;max-width:80%;position: absolute;
+			left:50%;top:50%;transform:translate(-50%,-50%);
+			text-align:center;font-size:1.5em;
+		}
+		.scene div h1:after{
+			content:"";
+			width:100%;height:1px;background-color: #fff;
+			display: block;margin:10px;
+		}
+
+		nav.menu{
+			position:fixed;width: 100%;height:40px;
+			background-color: skyblue;z-index:1;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".menu a").click(function(){
+				var target = $(this.hash);
+				var offsetTop = target.offset().top;
+				$("html").animate({scrollTop:offsetTop});
+			});
+		});
+	</script>
+</head>
+<body>
+	<nav class="menu">
+		<a href="#v01s">menu01</a>
+		<a href="#v02s">menu02</a>
+		<a href="#v03s">menu03</a>
+	</nav>
+	<section class="scene one" id="v01s">
+		<div>
+			<h1>Lorem ipsum dolor sit amet.</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi magni maxime odio, eveniet soluta reprehenderit facere veritatis consequuntur numquam quidem!</p>
+		</div>
+	</section>
+	<section class="scene two" id="v02s">
+		<div>
+			<h1>Voluptate alias nostrum nulla ipsam.</h1>
+			<p>Impedit, tenetur sit sequi fugiat maxime quidem, optio modi non eius consectetur delectus! Id earum illum hic, nulla deserunt delectus.</p>
+		</div>
+	</section>
+	<section class="scene three" id="v03s">
+		<div>
+			<h1>Magni velit necessitatibus quam ab?</h1>
+			<p>Ad ipsa minus maxime, consequuntur nostrum fugiat possimus ullam quam aperiam, iusto labore eligendi. Eum ullam, voluptatem eligendi nulla amet!</p>
+		</div>
+	</section>
+</body>
+</html>
