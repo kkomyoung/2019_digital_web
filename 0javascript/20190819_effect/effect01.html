@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>effect01</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<style>
+	.content{
+		width: 400px;
+		background-color: #eee;
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		$(".btn2").hide();
+		$(".btn1").click(function(){
+			$(".box").slideUp(1000,"swing",
+				function(){
+					$(".btn1").hide();
+					$(".btn2").show();
+				});
+		});
+		$(".btn3").click(function(){
+			$(".box").slideDown(1000,"linear",
+				function(){
+					$(".btn1").show();
+					$(".btn2").hide();
+					// alert("슬라이드다운되었습니다!!!")
+				});
+		});
+		$(".btn2").click(function(){
+			$(".box").fadeIn(1000,"swing",
+				function(){
+					$(".btn1").show();
+					$(".btn2").hide();
+				});
+		});
+		$(".btn4").click(function(){
+			$(".box").slideToggle(1000,"linear");
+			// $(".box").toggle();
+		});
+		$(".btn5").click(function(){
+			$(".box").fadeTo(1000,0.3);
+		});
+		$(".btn6").click(function(){
+			$(".box").fadeTo(1000,1);
+		});
+	});
+</script>
+<body>
+	<div>
+		<button class="btn1">slideUp</button>
+		<button class="btn2">fadeIn</button>
+		<!-- <button class="btn3">slideDown</button> -->
+	</div>
+	<div>
+		<button class="btn4">slideToggle</button>
+	</div>
+	<div>
+		<button class="btn5">fadeTo (0.3)</button>
+		<button class="btn6">fadeTo (1)</button>
+	</div>
+	<div class="box">
+		<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor possimus est adipisci earum aspernatur nam aut modi omnis, facere distinctio maiores minima vitae quas porro quasi vero corrupti exercitationem ut similique, nulla reiciendis enim laboriosam. Voluptas maxime numquam atque, quasi error odit incidunt amet, ipsam modi laudantium ipsum. Ratione iure, ab vel cumque autem, ipsum optio fuga qui sequi debitis rerum architecto dolore vero quod. Eos ea quam expedita dolores corrupti. Iure ad, blanditiis quasi. Molestiae odit voluptas esse temporibus asperiores, officiis sit eveniet eligendi soluta nostrum magni sunt totam aut adipisci consequuntur ab id suscipit officia! Hic, quis, enim?</div>
+	</div>
+	<div style="height: 400px;background: #f00"></div>
+</body>
+</html>
